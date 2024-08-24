@@ -26,6 +26,9 @@ git clone https://github.com/naveen0913/Search-API.git
 
 **###Commands**
 
-build the project : ./mvnw clean package 
-run the project : ./mvnw spring-boot:run
+
+- build the project : ./mvnw clean package
+- run the project : ./mvnw spring-boot:run
+
+
 
