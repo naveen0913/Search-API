@@ -26,7 +26,6 @@ public class SupplierController {
                                                          @RequestParam(required = false) String manufacturingProcesses,
                                                          @RequestParam(defaultValue = "0") int page,
                                                          @RequestParam(defaultValue = "5") int size) {
-//        Page<Supplier> suppliers = (Page<Supplier>) supplierService.getSuppliers(location, natureOfBusiness, manufacturingProcesses, page, size);
         return  supplierService.getSuppliers(location,natureOfBusiness,manufacturingProcesses,page,size);
 
     }
