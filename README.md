@@ -12,7 +12,7 @@ with CRUD operations for the data in the response.I have added the pagination,In
 - **Spring Security** : For authentication and authorization.
 - **Spring Data JPA** : Simplifies data access and management.
 - **Spring HATEOAS** : Adds pagination for the response.
-- 
+
 
 ## Prerequisites
 
