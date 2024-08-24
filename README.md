@@ -7,11 +7,12 @@ with CRUD operations for the data in the response.I have added the pagination,In
 
 ## Features
 
-**Spring Boot** : Provides a rapid application development framework.
-**PostgreSQL** : Used as the database.
-**Spring Security** : For authentication and authorization.
-**Spring Data JPA** : Simplifies data access and management.
-**Spring HATEOAS** : Adds pagination for the response.
+- **Spring Boot** : Provides a rapid application development framework.
+- **PostgreSQL** : Used as the database.
+- **Spring Security** : For authentication and authorization.
+- **Spring Data JPA** : Simplifies data access and management.
+- **Spring HATEOAS** : Adds pagination for the response.
+- 
 
 ## Prerequisites
 
@@ -27,8 +28,8 @@ git clone https://github.com/naveen0913/Search-API.git
 **###Commands**
 
 
-- build the project : ./mvnw clean package
-- run the project : ./mvnw spring-boot:run
+- build the project :  ./mvnw clean package
+- run the project :   ./mvnw spring-boot:run
 
 
 
