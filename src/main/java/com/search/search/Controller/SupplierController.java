@@ -21,10 +21,12 @@ public class SupplierController {
     private SupplierService supplierService;
 
     @GetMapping("query")
-    public List<Supplier> querySuppliers(@RequestParam(required = false) String location,
+    public Page<Supplier> querySuppliers(@RequestParam(required = false) String location,
                                                          @RequestParam(required = false) String natureOfBusiness,
-                                                         @RequestParam(required = false) String manufacturingProcesses) {
-        return  supplierService.getSuppliers(location,natureOfBusiness,manufacturingProcesses);
+                                                         @RequestParam(required = false) String manufacturingProcesses,
+                                         @RequestParam(required = true,defaultValue = "0") int pageNumber,@RequestParam (required = true,defaultValue = "9")int size)
+    {
+        return  supplierService.getSuppliers(location,natureOfBusiness,manufacturingProcesses,pageNumber,size);
 
     }
 

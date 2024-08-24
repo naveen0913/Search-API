@@ -5,6 +5,8 @@ import com.search.search.Model.Supplier;
 import com.search.search.Repository.SupplierRepository;
 import com.search.search.Responses.CustomResponse;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.PageRequest;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
@@ -17,14 +19,16 @@ public class SupplierService {
     @Autowired
     private SupplierRepository supplierRepository;
 
-    public List<Supplier> getSuppliers(String location, String natureOfBusiness, String manufacturingProcesses) {
-        List<Supplier> suppliers = supplierRepository.findSuppliersByCriteria(location, natureOfBusiness, manufacturingProcesses);
+    public Page<Supplier> getSuppliers(String location, String natureOfBusiness, String manufacturingProcesses, int pageNumber, int size) {
+        PageRequest pageRequest =  PageRequest.of(pageNumber,size);
+        Page<Supplier> suppliers = supplierRepository.findSuppliersByCriteria(location, natureOfBusiness, manufacturingProcesses,pageRequest);
 
         if (suppliers.isEmpty()){
             throw new RuntimeException("Suppliers data not available");
         }
         return suppliers;
     }
+
 
     public ResponseEntity<?> addNewSupplier(AddSupplierDTO addSupplierDTO){
         Supplier newSupplier = new Supplier();

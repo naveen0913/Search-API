@@ -18,7 +18,7 @@ public interface SupplierRepository extends JpaRepository<Supplier,String> {
             "(:location IS NULL OR s.location LIKE %:location%) AND " +
             "(:natureOfBusiness IS NULL OR s.natureOfBusiness LIKE %:natureOfBusiness%) AND " +
             "(:manufacturingProcesses IS NULL OR s.manufacturingProcesses LIKE %:manufacturingProcesses%)")
-    List<Supplier> findSuppliersByCriteria(@Param("location") String location,
+    Page<Supplier> findSuppliersByCriteria(@Param("location") String location,
                                            @Param("natureOfBusiness") String natureOfBusiness,
-                                           @Param("manufacturingProcesses") String process);
+                                           @Param("manufacturingProcesses") String process,Pageable pageable);
 }
