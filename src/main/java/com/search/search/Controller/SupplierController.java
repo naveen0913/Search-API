@@ -20,7 +20,7 @@ public class SupplierController {
     @Autowired
     private SupplierService supplierService;
 
-    @GetMapping("/query")
+    @GetMapping("query")
     public List<Supplier> querySuppliers(@RequestParam(required = false) String location,
                                                          @RequestParam(required = false) String natureOfBusiness,
                                                          @RequestParam(required = false) String manufacturingProcesses,
@@ -30,7 +30,7 @@ public class SupplierController {
 
     }
 
-    @PostMapping("add")
+    @PostMapping("query")
     public ResponseEntity<?> addNewSupplierData(@Valid @RequestBody AddSupplierDTO supplierDTO){
         return supplierService.addNewSupplier(supplierDTO);
     }
