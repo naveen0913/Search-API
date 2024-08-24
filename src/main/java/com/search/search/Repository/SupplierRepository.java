@@ -21,5 +21,4 @@ public interface SupplierRepository extends JpaRepository<Supplier,String> {
     List<Supplier> findSuppliersByCriteria(@Param("location") String location,
                                            @Param("natureOfBusiness") String natureOfBusiness,
                                            @Param("manufacturingProcesses") String process);
-
 }

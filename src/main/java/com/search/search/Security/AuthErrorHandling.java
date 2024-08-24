@@ -24,7 +24,7 @@ public class AuthErrorHandling implements AuthenticationEntryPoint {
         String jsonResponse = "{"
                 + "\"code\": 401,"
                 + "\"status\": \"error\","
-                + "\"message\": \"Unauthorized access. Please check your credentials.\""
+                + "\"message\": \"Unauthorized access.\""
                 + "}";
 
         PrintWriter writer = response.getWriter();

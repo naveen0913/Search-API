@@ -17,7 +17,7 @@ public class SupplierService {
     @Autowired
     private SupplierRepository supplierRepository;
 
-    public List<Supplier> getSuppliers(String location, String natureOfBusiness, String manufacturingProcesses, int page, int size) {
+    public List<Supplier> getSuppliers(String location, String natureOfBusiness, String manufacturingProcesses) {
         List<Supplier> suppliers = supplierRepository.findSuppliersByCriteria(location, natureOfBusiness, manufacturingProcesses);
 
         if (suppliers.isEmpty()){
